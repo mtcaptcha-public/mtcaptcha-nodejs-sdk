@@ -1,0 +1,26 @@
+{
+  "name": "mtcaptcha-nodejs-sdk",
+  "version": "1.0.0",
+  "description": "NodeJS SDK for MTCaptcha",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mtcaptcha-public"
+  },
+  "keywords": [
+    "mtcaptcha",
+    "mt",
+    "captcha",
+    "morethancaptcha",
+    "mtc"
+  ],
+  "author": "batou-mtcapthca",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "request": "^2.88.0"
+  }
+}

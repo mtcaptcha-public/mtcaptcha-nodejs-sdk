@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<head>
+  <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/all.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css" crossorigin="anonymous">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>NodeJS SDK | MTCaptcha</title>
+
+  <!-- MTCaptcha Code Start-->
+  <script>
+    var mtcaptchaConfig = {
+      "sitekey": "<MTCAPTCHA_SITE_KEY_HERE>"   // Replace the <MTCAPTCHA_SITE_KEY_HERE> with valid sitekey of your account. It can be obtained from your site account at https://admin.mtcaptcha.com
+    };
+    (function () {
+      var mt_service = document.createElement('script'); mt_service.async = true; mt_service.src = 'https://service.mtcaptcha.com/mtcv1/client/mtcaptcha.min.js'; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(mt_service);
+      var mt_service2 = document.createElement('script'); mt_service2.async = true; mt_service2.src = 'https://service2.mtcaptcha.com/mtcv1/client/mtcaptcha2.min.js'; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(mt_service2);
+    })();
+  </script>
+
+  <!-- MTCaptcha Code End-->
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <h5 class="card-title text-center">Sign In</h5>
+            <form class="form-signin" id="sign-in-form" action="validate-token">
+              <div class="form-label-group">
+                <input type="email" id="inputEmail" name="inputEmail" class="form-control" placeholder="Email address"
+                  required autofocus>
+                <label for="inputEmail">Email address</label>
+              </div>
+
+              <div class="form-label-group">
+                <input type="password" id="inputPassword" name="inputPassword" class="form-control"
+                  placeholder="Password" required>
+                <label for="inputPassword">Password</label>
+              </div>
+
+              <div class="form-label-group">
+                <!-- Div to place the MTCaptcha -->
+                <div class="mtcaptcha"></div>
+              </div>
+
+              <button class="btn btn-lg btn-primary btn-block text-uppercase" id="sign-in" type="submit">Sign
+                in</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type='text/javascript' src="js/jquery-3.4.1.min.js"></script>
+  <script type='text/javascript' src="js/bootstrap.bundle.min.js"></script>
+  <script>
+    $("#sign-in-form").submit(function (e) {
+      e.preventDefault();
+      var form = $("#sign-in-form");
+      var url = form.attr('action');
+      $.ajax({
+        type: "POST",
+        url: url,
+        data: form.serialize(),
+        success: function (data) {
+          console.log(data);
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
