@@ -1,17 +1,29 @@
 MTCaptcha NodeJS SDK
 ===============
-Integrate MTCaptcha (https://www.mtcaptcha.com/) with any NodeJS Website.
+Integrate MTCaptcha (https://www.mtcaptcha.com/) node module with any NodeJS Website
+
+# node-mtcaptcha
+
+mtcaptcha-nodejs-sdk verifies MTCaptcha (https://www.mtcaptcha.com/)
 
 
-Document description
----------------
- - config/config.json - Get Site key and Private Key from https://admin.mtcaptcha.com/
- - lib/MTCaptchaLib.js - Core library of MTCaptcha
- - public/index.html - Front end display page; customize per requirement
+## Installation
 
+Via git:
+
+    $ git clone git://github.com/mtcaptcha-public/mtcaptcha-nodejs-sdk.git ~/.node_libraries/mtcaptcha-nodejs-sdk
+
+Via npm:
+
+    $ npm install mtcaptcha
+
+## Setup
+
+Before you can use this module, you must visit https://www.mtcaptcha.com/ and create a account in https://admin.mtcaptcha.com/login
+to request a public and private key for your domain.
 
 Release log
 -----------------
-+ 1.0.0
++ 1.0.1
 
- - First Version
+- First Version

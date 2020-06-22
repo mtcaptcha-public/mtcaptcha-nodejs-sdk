@@ -1,8 +1,8 @@
 {
-  "name": "mtcaptcha-nodejs-sdk",
-  "version": "1.0.0",
-  "description": "NodeJS SDK for MTCaptcha",
-  "main": "server.js",
+  "name": "mtcaptcha",
+  "version": "1.0.1",
+  "description": "Node module for MTCaptcha verification",
+  "main": "./lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,8 +20,6 @@
   "author": "batou-mtcapthca",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
-    "cors": "^2.8.5",
     "request": "^2.88.0"
   }
 }
