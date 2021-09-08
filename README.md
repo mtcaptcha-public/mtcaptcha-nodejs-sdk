@@ -22,8 +22,12 @@ Via npm:
 Before you can use this module, you must visit https://www.mtcaptcha.com/ and create a account in https://admin.mtcaptcha.com/login
 to request a public and private key for your domain.
 
-Release log
------------------
-+ 1.0.1
+- Import module 
+`const MTCaptchaLib = require('mtcaptcha').MTCaptcha;`
+- Create an instance of MTCaptcha module with the private key and verified token
+`const mtcapInstance = new MTCaptchaLib(MTCaptchaConfig['MTCAPTCHA_PRIVATE_KEY'],req.body['verifiedtoken']);`
 
-- First Version
+- Use this instance to verify the token obtained
+`mtcapInstance.verify(function (tokenValidationResponse) {}`
+
+- Sample implementation link: https://github.com/mtcaptcha-public/mtcaptcha-nodejs-sample-api
