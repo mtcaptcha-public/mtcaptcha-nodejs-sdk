@@ -1,6 +1,6 @@
 {
   "name": "mtcaptcha",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Node module for MTCaptcha verification",
   "main": "./lib/index.js",
   "scripts": {
@@ -20,6 +20,6 @@
   "author": "batou-mtcapthca",
   "license": "ISC",
   "dependencies": {
-    "request": "^2.88.0"
+    "request": "^2.88.2"
   }
 }
