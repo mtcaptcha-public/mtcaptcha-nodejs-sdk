@@ -1,25 +1,42 @@
 {
   "name": "mtcaptcha",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Node module for MTCaptcha verification",
-  "main": "./lib/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "author": "batou-mtcapthca",
+  "organization": "MTcaptcha",
+  "homepage": "https://github.com/mtcaptcha-public/mtcaptcha-nodejs-sdk",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mtcaptcha-public"
+    "url": "git+https://github.com/mtcaptcha-public/mtcaptcha-nodejs-sdk.git",
+    "web": "https://github.com/mtcaptcha-public/mtcaptcha-nodejs-sdk"
+  },
+  "bugs": {
+    "url": "https://github.com/mtcaptcha-public/mtcaptcha-nodejs-sdk/issues"
+  },
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/mtcaptcha-nodejs-sdk.es.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],  
+  "scripts": {
+    "build": "vite build && npm run build:types",
+    "build:types": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "mtcaptcha",
     "mt",
     "captcha",
     "morethancaptcha",
-    "mtc"
+    "mtc",
+    "node"
   ],
-  "author": "batou-mtcapthca",
-  "license": "ISC",
-  "dependencies": {
-    "request": "^2.88.0"
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "@vitejs/plugin-vue": "^6.0.5",
+    "typescript": "^5.9.3",
+    "vite": "^8.0.0"
   }
 }
